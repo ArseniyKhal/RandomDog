@@ -9,9 +9,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.0.2",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
-    "web-vitals": "^2.1.4"
+	 "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,5 +43,15 @@
     "prettier": "^3.2.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3"
-  }
+  },
+  "overrides": {
+	"@typescript-eslint/typescript-estree": "^5.57.1",
+	"fork-ts-checker-webpack-plugin": "^6.5.3",
+	"typescript": "^5.3.3"
+ },
+  "types": "./index.d.ts",
+  "description": "Создать SPA со списком карточек, на каждой из которых выводится картинка и любая информация на ваш вкус, которая пришла с эндпоинта.",
+  "main": "index.js",
+  "author": "ArsH",
+  "license": "ISC"
 }
