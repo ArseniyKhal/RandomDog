@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useGetDogQuery } from './services/servicesApi'
 import { addDogList } from './store/actions/creators/dogsCreator'
 import { useEffect } from 'react'
-import { dogsSelector } from './store/selectors/dogsSelectors'
-import { Card } from './components/Card/Card'
+import { Main } from './components/Main/Main'
+import { AppRoutes } from './routes'
 import * as S from './App.styles'
 
 export interface DogType {
@@ -16,7 +16,6 @@ export interface DogType {
 function App() {
   const dispatch = useDispatch()
   const { data, isError, isLoading } = useGetDogQuery(7)
-  const dogsList = useSelector(dogsSelector)
 
   useEffect(() => {
     if (data?.status === 'success') {
@@ -32,10 +31,6 @@ function App() {
     }
   }, [data])
 
-  const dogsLitFoRender = dogsList?.map((el: DogType) => (
-    <Card key={el.id} dataCard={el} />
-  ))
-
   return (
     <>
       <S.GlobalStyle />
@@ -47,11 +42,7 @@ function App() {
             </S.HeaderTitle>
           </S.Container>
         </S.Header>
-        <S.Main>
-          <S.Container>
-            <S.DogList>{dogsLitFoRender}</S.DogList>
-          </S.Container>
-        </S.Main>
+        <AppRoutes />
       </S.Wrapper>
     </>
   )
