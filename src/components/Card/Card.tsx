@@ -3,10 +3,16 @@ import * as S from './Card.styles'
 export const Card = ({ dataCard }: any) => {
   return (
     <S.Card>
-      <S.Pic>
+      <S.Picture>
         <S.Img src={dataCard.urlImg} alt="dog" />
-      </S.Pic>
-      <p>Порода: {dataCard.breed}</p>
+      </S.Picture>
+      <S.CarBody>
+        <S.CarText>Порода: {dataCard.breed}</S.CarText>
+        <S.CarButtons>
+          <S.Button>Удалить</S.Button>
+          <S.Button>Лайк</S.Button>
+        </S.CarButtons>
+      </S.CarBody>
     </S.Card>
   )
 }

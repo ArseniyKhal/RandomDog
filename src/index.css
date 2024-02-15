@@ -10,5 +10,8 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
-	background-color: rgb(68, 199, 68);
+	background-color: rgb(56, 138, 56);
+	justify-content: space-around;
+	flex-direction: column;
+	transition: all 0.3 ease;
 }
