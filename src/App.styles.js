@@ -86,7 +86,7 @@ html, body {
 `
 
 export const Wrapper = styled.div`
-  background-color: #bbb;
+  background-color: #eee;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -95,23 +95,23 @@ export const Wrapper = styled.div`
 `
 export const Container = styled.div`
   max-width: 1190px;
-  //   width: 1190px;
   padding: 0 15px;
   margin: 0 auto;
 `
 export const Header = styled.header`
   width: 100%;
-  padding: 10px;
   font-size: 30px;
-  background-color: coral;
+
   text-align: center;
 `
-export const Main = styled.main`
-  padding: 10px;
-  background-color: green;
+export const HeaderTitle = styled.h1`
+  background-color: coral;
 `
+export const Main = styled.main``
 export const DogList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
+  background-color: rgb(68, 199, 68);
+  padding: 10px;
 `
