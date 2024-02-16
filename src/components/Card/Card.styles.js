@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { Button } from '../../App.styles'
 
 export const Card = styled.li`
   background-color: rgb(60, 168, 60);
@@ -31,20 +32,10 @@ export const CardButtons = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export const Button = styled.button`
+export const CardButton = styled(Button)`
   font-size: 20px;
-  border-radius: 15px;
-  padding: 2px 8px;
   width: 120px;
   background-color: rgb(56, 138, 56);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: translate(0, 1px);
-  }
-  &:active {
-    transform: translate(0, 3px);
-  }
 `
 export const ButtonSvg = styled.svg`
   width: 30px;

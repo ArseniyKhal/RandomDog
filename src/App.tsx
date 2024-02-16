@@ -1,10 +1,11 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useGetDogQuery } from './services/servicesApi'
 import { addDogList } from './store/actions/creators/dogsCreator'
 import { useEffect } from 'react'
 import { Main } from './components/Main/Main'
 import { AppRoutes } from './routes'
 import * as S from './App.styles'
+import { dogsSelector } from './store/selectors/dogsSelectors'
 
 export interface DogType {
   id: string
@@ -15,6 +16,7 @@ export interface DogType {
 
 function App() {
   const dispatch = useDispatch()
+  const dogsList = useSelector(dogsSelector)
   const { data, isError, isLoading } = useGetDogQuery(7)
 
   useEffect(() => {
@@ -27,7 +29,10 @@ function App() {
           isLike: false,
         }
       })
-      dispatch(addDogList(dogsOfStore))
+      if (!dogsList) {
+        dispatch(addDogList(dogsOfStore))
+        console.log('dispatch')
+      }
     }
   }, [data])
 

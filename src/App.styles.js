@@ -110,3 +110,15 @@ export const HeaderTitle = styled.h1`
     font-size: 30px;
   }
 `
+export const Button = styled.button`
+  border-radius: 15px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translate(0, 1px);
+  }
+  &:active {
+    transform: translate(0, 3px);
+  }
+`

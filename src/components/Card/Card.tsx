@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
 import { MouseEvent, useState } from 'react'
 import { removeDog, likeDog } from '../../store/actions/creators/dogsCreator'
-import * as S from './Card.styles'
 import { useDispatch } from 'react-redux'
+import * as S from './Card.styles'
 
 export const Card = ({ dataCard }: any) => {
   const dispatch = useDispatch()
-  const [isLike, setLike] = useState(false)
 
   // кнопка удалить
   const handleDelClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -19,7 +18,6 @@ export const Card = ({ dataCard }: any) => {
     e.stopPropagation()
     e.preventDefault()
     dispatch(likeDog(dataCard.id))
-    setLike(!isLike)
   }
 
   return (
@@ -31,21 +29,21 @@ export const Card = ({ dataCard }: any) => {
         <S.CardBody>
           <S.CardText>Порода: {dataCard?.breed}</S.CardText>
           <S.CardButtons>
-            <S.Button
+            <S.CardButton
               onClick={(e: MouseEvent<HTMLButtonElement>) => {
                 handleDelClick(e)
               }}
             >
               Удалить
-            </S.Button>
-            <S.Button
+            </S.CardButton>
+            <S.CardButton
               onClick={(e: MouseEvent<HTMLButtonElement>) => {
                 handleLikeClick(e)
               }}
             >
               <S.ButtonSvg
                 style={{
-                  fill: `${isLike ? 'red' : 'transparent'}`,
+                  fill: `${dataCard.isLike ? 'red' : 'transparent'}`,
                 }}
                 viewBox="0 0 16 12"
               >
@@ -54,7 +52,7 @@ export const Card = ({ dataCard }: any) => {
                   stroke="red"
                 />
               </S.ButtonSvg>
-            </S.Button>
+            </S.CardButton>
           </S.CardButtons>
         </S.CardBody>
       </S.Card>
