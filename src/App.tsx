@@ -31,7 +31,6 @@ function App() {
       })
       if (!dogsList) {
         dispatch(addDogList(dogsOfStore))
-        console.log('dispatch')
       }
     }
   }, [data])
