@@ -1,6 +1,7 @@
 {
   "name": "random-dog",
   "version": "0.1.0",
+  "homepage": "https://github.com/ArseniyKhal/RandomDog",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.0",
