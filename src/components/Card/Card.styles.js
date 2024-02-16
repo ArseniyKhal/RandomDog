@@ -3,7 +3,6 @@ import { styled } from 'styled-components'
 export const Card = styled.li`
   background-color: rgb(60, 168, 60);
   border-radius: 10px;
-  //   cursor: pointer;
   overflow: hidden;
   display: flex;
   flex-direction: column;

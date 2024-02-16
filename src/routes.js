@@ -5,7 +5,7 @@ import { BigCard } from './components/BigCard/BigCard'
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Main />}></Route>
+      <Route path="/" element={<Main />} />
       <Route path="card/:id" element={<BigCard />} />
     </Routes>
   )

@@ -2,15 +2,6 @@ import { styled, createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 @font-face {
-	font-family: "StratosSkyeng";
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-	src: local("StratosSkyeng"), local("StratosSkyeng"),
-		url("/fonts/StratosSkyeng.woff2") format("woff2"),
-		url("/fonts/StratosSkyeng.woff") format("woff");
-}
-@font-face {
 	font-family: "Roboto";
 	font-weight: 400;
 	font-style: normal;
@@ -20,7 +11,6 @@ export const GlobalStyle = createGlobalStyle`
 		url("/fonts/Roboto-Regular.woff") format("woff"),
 		url("/fonts/Roboto-Regular.ttf") format("ttf");
 }
-
 * {
 	margin: 0;
 	padding: 0;
@@ -84,12 +74,11 @@ html, body {
 	scrollbar-color:  #D9D9D9 #FFF;
 }
 `
-
 export const Wrapper = styled.div`
-  background-color: #eee;
+  background-color: rgb(166, 224, 166);
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
 `
@@ -115,10 +104,14 @@ export const Button = styled.button`
   padding: 2px 8px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  background-color: rgb(191, 247, 191);
   &:hover {
     transform: translate(0, 1px);
   }
   &:active {
     transform: translate(0, 3px);
   }
+`
+export const ModalWindow = styled.div`
+  font-size: 54px;
 `

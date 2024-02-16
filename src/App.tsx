@@ -2,10 +2,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useGetDogQuery } from './services/servicesApi'
 import { addDogList } from './store/actions/creators/dogsCreator'
 import { useEffect } from 'react'
-import { Main } from './components/Main/Main'
 import { AppRoutes } from './routes'
-import * as S from './App.styles'
 import { dogsSelector } from './store/selectors/dogsSelectors'
+import * as S from './App.styles'
 
 export interface DogType {
   id: string
@@ -17,7 +16,7 @@ export interface DogType {
 function App() {
   const dispatch = useDispatch()
   const dogsList = useSelector(dogsSelector)
-  const { data, isError, isLoading } = useGetDogQuery(7)
+  const { data, isError, isLoading } = useGetDogQuery(12)
 
   useEffect(() => {
     if (data?.status === 'success') {

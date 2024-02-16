@@ -1,22 +1,14 @@
 import { styled } from 'styled-components'
 import { Button } from '../../App.styles'
 
-export const BigCard = styled.div`
-  height: 100vh;
-  background-color: rgb(166, 224, 166);
-`
+export const BigCard = styled.div``
 export const Content = styled.div`
-  //   height: 100vh;
   padding: 10px;
   background-color: rgb(60, 168, 60);
-  //   border-radius: 10px;
-  //   //   cursor: pointer;
-  //   overflow: hidden;
   display: flex;
   flex-direction: column;
 `
 export const MainContent = styled.div`
-  height: 100vh;
   padding: 10px;
 `
 export const Img = styled.img`

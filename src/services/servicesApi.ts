@@ -6,7 +6,6 @@ export const dogApi = createApi({
     baseUrl: 'https://dog.ceo/api/breeds/image/random',
   }),
   endpoints: (builder) => ({
-    // получаем картинки собачек
     getDog: builder.query({
       query: (n) => `/${n}`,
     }),

@@ -1,12 +1,9 @@
 import { styled } from 'styled-components'
 import { Button } from '../../App.styles'
 
-export const Main = styled.main`
-  background-color: rgb(166, 224, 166);
-`
+export const Main = styled.main``
 export const MainContent = styled.div`
-  height: 100vh;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
 `
 export const DogList = styled.ul`
   display: grid;
