@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/RandomDog/static/js/main.dce340b1.js",
+    "index.html": "/RandomDog/index.html",
+    "main.dce340b1.js.map": "/RandomDog/static/js/main.dce340b1.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dce340b1.js"
+  ]
+}
