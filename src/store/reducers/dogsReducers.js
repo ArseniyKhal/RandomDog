@@ -1,6 +1,7 @@
 import {
   ADD_DOGS,
   REMOVE_DOG,
+  LIKE_DOG,
   ADD_PLAYLIST,
   SET_CURRENT_TRACK,
   TOGGLE_PAUSE,
@@ -30,13 +31,26 @@ export default function dogsReducer(state = initialState, action) {
       }
     }
 
-    // удалить собчку из списка
+    // удалить собачку из списка
     case REMOVE_DOG: {
       const { id } = action.payload
-      console.log(id)
       return {
         ...state,
         dogsList: state.dogsList.filter((el) => el.id !== id),
+      }
+    }
+
+    // лайк по собачке
+    case LIKE_DOG: {
+      const { id } = action.payload
+      const newDogsList = state.dogsList.map((value) =>
+        Object.assign({}, value),
+      )
+      const index = newDogsList.findIndex((el) => el.id === id)
+      newDogsList[index].isLike = !newDogsList[index].isLike
+      return {
+        ...state,
+        dogsList: newDogsList,
       }
     }
 

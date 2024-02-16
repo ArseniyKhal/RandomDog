@@ -1,22 +1,24 @@
 import { Link } from 'react-router-dom'
 import { MouseEvent, useState } from 'react'
-import { removeDog } from '../../store/actions/creators/dogsCreator'
+import { removeDog, likeDog } from '../../store/actions/creators/dogsCreator'
 import * as S from './Card.styles'
 import { useDispatch } from 'react-redux'
 
 export const Card = ({ dataCard }: any) => {
   const dispatch = useDispatch()
   const [isLike, setLike] = useState(false)
+
+  // кнопка удалить
   const handleDelClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
     e.preventDefault()
-    console.log('удалить')
     dispatch(removeDog(dataCard.id))
   }
+  //кнопка лайк
   const handleLikeClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
     e.preventDefault()
-    console.log('лайк')
+    dispatch(likeDog(dataCard.id))
     setLike(!isLike)
   }
 

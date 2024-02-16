@@ -1,9 +1,10 @@
 import { styled } from 'styled-components'
 
-export const Main = styled.main``
+export const Main = styled.main`
+  background-color: rgb(166, 224, 166);
+`
 export const MainContent = styled.div`
   height: 100vh;
-  background-color: rgb(166, 224, 166);
 `
 export const DogList = styled.ul`
   display: grid;

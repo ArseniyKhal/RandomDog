@@ -1,6 +1,8 @@
 // audioplayer constants
 export const ADD_DOGS = 'ADD_DOGS'
 export const REMOVE_DOG = 'REMOVE_DOG'
+export const LIKE_DOG = 'LIKE_DOG'
+
 export const ADD_PLAYLIST = 'ADD_PLAYLIST'
 export const SET_CURRENT_TRACK = 'SET_CURRENT_TRACK'
 export const TOGGLE_PAUSE = 'TOGGLE_PAUSE'

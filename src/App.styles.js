@@ -102,10 +102,10 @@ export const Header = styled.header`
   width: 100%;
   font-size: 30px;
   text-align: center;
+  background-color: coral;
 `
 export const HeaderTitle = styled.h1`
   font-size: 54px;
-  background-color: coral;
   @media (width <= 800px) {
     font-size: 30px;
   }
