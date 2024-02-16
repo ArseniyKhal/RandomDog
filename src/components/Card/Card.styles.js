@@ -20,21 +20,21 @@ export const Img = styled.img`
   height: 100%;
   object-fit: cover;
 `
-export const CarBody = styled.div`
+export const CardBody = styled.div`
   padding: 10px;
 `
-export const CarText = styled.p`
+export const CardText = styled.p`
   font-size: 20px;
   margin-bottom: 10px;
 `
-export const CarButtons = styled.div`
+export const CardButtons = styled.div`
   display: flex;
   justify-content: space-between;
 `
 export const Button = styled.button`
   font-size: 20px;
   border-radius: 15px;
-  padding: 8px;
+  padding: 2px 8px;
   width: 120px;
   background-color: rgb(56, 138, 56);
   cursor: pointer;
@@ -45,4 +45,10 @@ export const Button = styled.button`
   &:active {
     transform: translate(0, 3px);
   }
+`
+export const ButtonSvg = styled.svg`
+  width: 30px;
+  height: 30px;
+  fill: transparent;
+  fill: ${(props) => (props.primary ? 'red' : '')};
 `
