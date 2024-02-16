@@ -1,5 +1,6 @@
 import {
   ADD_DOGS,
+  REMOVE_DOG,
   ADD_PLAYLIST,
   SET_CURRENT_TRACK,
   TOGGLE_PAUSE,
@@ -26,6 +27,16 @@ export default function dogsReducer(state = initialState, action) {
       return {
         ...state,
         dogsList,
+      }
+    }
+
+    // удалить собчку из списка
+    case REMOVE_DOG: {
+      const { id } = action.payload
+      console.log(id)
+      return {
+        ...state,
+        dogsList: state.dogsList.filter((el) => el.id !== id),
       }
     }
 

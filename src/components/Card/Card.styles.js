@@ -50,5 +50,4 @@ export const ButtonSvg = styled.svg`
   width: 30px;
   height: 30px;
   fill: transparent;
-  fill: ${(props) => (props.primary ? 'red' : '')};
 `

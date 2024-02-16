@@ -14,7 +14,9 @@ export const Main = () => {
   return (
     <S.Main>
       <Container>
-        <S.DogList>{dogsLitFoRender}</S.DogList>
+        <S.MainContent>
+          <S.DogList>{dogsLitFoRender}</S.DogList>
+        </S.MainContent>
       </Container>
     </S.Main>
   )
